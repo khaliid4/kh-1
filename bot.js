@@ -1291,7 +1291,6 @@ client.on('message', message => {
 
 //////////////////////////كود أعطاء الالوان//////////////////////////////////////
 
-
           client.on('message', message => {
             let args = message.content.split(' ').slice(1);
             if(message.content.split(' ')[0] == `${prefix}لون`){
