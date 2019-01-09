@@ -997,6 +997,7 @@ client.on('message', function(msg) {
 
 /////////////////////////////كورد برودكاست مطور////////////////////////////
 
+
 client.on("message", async message => {
     var command = message.content.split(" ")[0];
     command = command.slice(prefix.length);
@@ -1081,7 +1082,6 @@ client.on("message", async message => {
                         });
             }
 });
-
 
 
 ////////////////////////////////////كود المساعدة للادمن/////////////////////////////////
