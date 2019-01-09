@@ -1171,6 +1171,7 @@ client.on('message', message => {
 ❖ يعرض صورة السيرفر في الشات  ➾        -صورة
 ❖ يعرض لك التاريخ بالشات  ➾      -التاريخ
 ❖ يعرض لك أعضاء السيرفر  ➾       -اعضاء
+❖ يعطيك لون الذي اخترتة   ➾       -لون
 ❖  يعرض لك معلومات عن السيرفر بالشات  ➾      -السيرفر
 ❖ -chan              ➾ يعرض لك معلومات عن الشات 
 ❖ -id              ➾ يعرض معلوماتك او معلومات الشخص اللي تمنشن له
@@ -1292,10 +1293,10 @@ client.on('message', message => {
 //////////////////////////كود أعطاء الالوان//////////////////////////////////////
 
 
- client.on('message', message => {
-     if (message.author.bot) return;
-    if (message.content.startsWith("لون"))
- {
+
+          client.on('message', message => {
+            let args = message.content.split(' ').slice(1);
+            if(message.content.split(' ')[0] == `${prefix}لون`){
             const embedd = new Discord.RichEmbed()
             .setFooter('Requested by '+message.author.username, message.author.avatarURL)
             .setDescription(`**لا يوجد لون بهذا الأسم ** ❌ `)
@@ -1330,7 +1331,6 @@ client.on('message', message => {
            
             }
             });
-
 
 /////////////////////////////////////////////////////////////////////
 
